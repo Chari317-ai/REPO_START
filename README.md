@@ -20,24 +20,24 @@ Mac 和 Windows 都能用。每一步都會先用白話解釋在做什麼，需�
 
 在 Codex 裡輸入：
 
-> 請幫我安裝這個 skill 到 ~/.agents/skills：https://github.com/Chari317-ai/git-github-tutor
+> 請幫我安裝這個 skill 到 ~/.agents/skills：https://github.com/Chari317-ai/REPO_START
 
 ### 自己貼指令安裝
 
 **Mac**（打開「終端機」App 貼上）：
 
 ```
-mkdir -p ~/.agents/skills && curl -L https://github.com/Chari317-ai/git-github-tutor/archive/refs/heads/main.tar.gz | tar -xz -C ~/.agents/skills --strip-components=2 git-github-tutor-main/skills/git-github-tutor
+mkdir -p ~/.agents/skills && curl -L https://github.com/Chari317-ai/REPO_START/archive/refs/heads/main.tar.gz | tar -xz -C ~/.agents/skills --strip-components=2 REPO_START-main/skills/git-github-tutor
 ```
 
 **Windows**（打開 PowerShell 貼上）：
 
 ```
 $zip = "$env:TEMP\git-github-tutor.zip"
-Invoke-WebRequest https://github.com/Chari317-ai/git-github-tutor/archive/refs/heads/main.zip -OutFile $zip
+Invoke-WebRequest https://github.com/Chari317-ai/REPO_START/archive/refs/heads/main.zip -OutFile $zip
 Expand-Archive $zip -DestinationPath "$env:TEMP\git-github-tutor" -Force
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-Copy-Item "$env:TEMP\git-github-tutor\git-github-tutor-main\skills\git-github-tutor" "$HOME\.agents\skills\" -Recurse -Force
+Copy-Item "$env:TEMP\git-github-tutor\REPO_START-main\skills\git-github-tutor" "$HOME\.agents\skills\" -Recurse -Force
 ```
 
 裝好後，**關掉再重開 Codex**。
